@@ -1,17 +1,10 @@
 package main
 
-import (
-	"net/http"
-
-	gin "github.com/gin-gonic/gin"
-)
+import "fmt"
 
 func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+	i := func(a, b int) int {
+		return a + b
+	}
+	fmt.Print(i(1, 2))
 }
