@@ -1,10 +1,14 @@
 package main
 
-import "fmt"
+type Student struct {
+	name string
+	age  int
+}
+
+func (s Student) getFullInfo() string {
+	return s.name + s.name
+}
 
 func main() {
-	i := func(a, b int) int {
-		return a + b
-	}
-	fmt.Print(i(1, 2))
+
 }
